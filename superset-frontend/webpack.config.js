@@ -514,7 +514,8 @@ if (isDevMode) {
       },
       logging: 'error',
     },
-    static: path.join(process.cwd(), '../static/assets'),
+    // static: path.join(__dirname, '../superset/static/assets'),
+    static: BUILD_DIR,
   };
 }
 

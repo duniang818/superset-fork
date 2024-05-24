@@ -1,0 +1,61 @@
+{
+  "type": "float-area",
+  "_widgets": [
+    [
+      {
+        "widget": {
+          "constructionOptions": {
+            "factoryId": "code-editor-opener",
+            "options": {
+              "kind": "navigatable",
+              "uri": "file:///d%3A/superset-fork/superset-frontend/webpack.config.js",
+              "floatAreaId": "31d11d80-418d-41b2-9891-f48c9c956938"
+            }
+          },
+          "innerWidgetState": {
+            "cursorState": [
+              {
+                "inSelectionMode": false,
+                "selectionStart": {
+                  "lineNumber": 149,
+                  "column": 18
+                },
+                "position": {
+                  "lineNumber": 149,
+                  "column": 18
+                }
+              }
+            ],
+            "viewState": {
+              "scrollLeft": 0,
+              "firstPosition": {
+                "lineNumber": 136,
+                "column": 1
+              },
+              "firstPositionDeltaTop": -16
+            },
+            "contributionsState": {
+              "editor.contrib.folding": {
+                "lineCount": 537,
+                "provider": "syntax",
+                "foldedImports": false
+              },
+              "editor.contrib.wordHighlighter": false
+            }
+          }
+        },
+        "width": 600,
+        "height": 450,
+        "spacing": 106
+      }
+    ]
+  ],
+  "_widths": [
+    600
+  ],
+  "_modelData": {
+    "connections": [],
+    "annotations": [],
+    "highlights": []
+  }
+}
