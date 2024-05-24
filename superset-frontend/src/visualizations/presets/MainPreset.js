@@ -16,6 +16,13 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+/**
+ * 添加第三方插件--begin
+ */
+
+/**
+ * 添加第三方插件--end
+ */
 import { isFeatureEnabled, FeatureFlag, Preset } from '@superset-ui/core';
 import CalendarChartPlugin from '@superset-ui/legacy-plugin-chart-calendar';
 import ChordChartPlugin from '@superset-ui/legacy-plugin-chart-chord';

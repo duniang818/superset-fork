@@ -55,7 +55,8 @@ const ASSET_BASE_URL = process.env.ASSET_BASE_URL || '';
 
 const output = {
   path: BUILD_DIR,
-  publicPath: `${ASSET_BASE_URL}/static/assets/`,
+  // publicPath: `${ASSET_BASE_URL}/src/assets/`,
+  publicPath: 'auto',
 };
 if (isDevMode) {
   output.filename = '[name].[contenthash:8].entry.js';
@@ -117,6 +118,7 @@ const plugins = [
     'process.env.REDUX_DEFAULT_MIDDLEWARE':
       process.env.REDUX_DEFAULT_MIDDLEWARE,
     'process.env.SCARF_ANALYTICS': JSON.stringify(process.env.SCARF_ANALYTICS),
+    'process.env.ASSET_BASE_URL': JSON.stringify(ASSET_BASE_URL),
   }),
 
   new CopyPlugin({
@@ -523,7 +525,7 @@ if (isDevMode) {
         proxyConfig = getProxyConfig(manifest);
       });
     },
-    historyApiFallback: true,
+    historyApiFallback: false,
     hot: true,
     port: devserverPort,
     // Only serves bundled files from webpack-dev-server
@@ -540,7 +542,7 @@ if (isDevMode) {
       },
       logging: 'error',
     },
-    static: path.join(process.cwd(), '../static/assets'),
+    static: path.join(__dirname, '../superset/static/assets'),
   };
 }
 
