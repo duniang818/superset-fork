@@ -44,10 +44,8 @@ from superset.sql_lab import (
     apply_limit_if_exists,
 )
 from superset.sql_parse import CtasMethod
-from superset.utils.core import (
-    backend,
-    datetime_to_epoch,  # noqa: F401
-)
+from superset.utils.core import backend
+from superset.utils.json import datetime_to_epoch  # noqa: F401
 from superset.utils.database import get_example_database, get_main_database
 
 from tests.integration_tests.base_tests import SupersetTestCase
@@ -284,9 +282,15 @@ class TestSqlLab(SupersetTestCase):
             # sqlite doesn't support database creation
             return
 
+        catalog = examples_db.get_default_catalog()
         sqllab_test_db_schema_permission_view = (
             security_manager.add_permission_view_menu(
-                "schema_access", f"[{examples_db.name}].[{CTAS_SCHEMA_NAME}]"
+                "schema_access",
+                security_manager.get_schema_perm(
+                    examples_db.name,
+                    catalog,
+                    CTAS_SCHEMA_NAME,
+                ),
             )
         )
         schema_perm_role = security_manager.add_role("SchemaPermission")

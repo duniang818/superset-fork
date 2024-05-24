@@ -36,7 +36,6 @@ from sqlalchemy.exc import DBAPIError
 from sqlalchemy.sql import func
 
 from superset import db, security_manager
-from superset.commands.database.ssh_tunnel.exceptions import SSHTunnelDatabasePortError  # noqa: F401
 from superset.connectors.sqla.models import SqlaTable
 from superset.databases.ssh_tunnel.models import SSHTunnel
 from superset.databases.utils import make_url_safe  # noqa: F401
@@ -195,6 +194,7 @@ class TestDatabaseApi(SupersetTestCase):
             "allow_cvas",
             "allow_dml",
             "allow_file_upload",
+            "allow_multi_catalog",
             "allow_run_async",
             "allows_cost_estimate",
             "allows_subquery",
@@ -296,14 +296,14 @@ class TestDatabaseApi(SupersetTestCase):
         "superset.commands.database.test_connection.TestConnectionDatabaseCommand.run",
     )
     @mock.patch("superset.commands.database.create.is_feature_enabled")
-    @mock.patch(
-        "superset.models.core.Database.get_all_schema_names",
-    )
+    @mock.patch("superset.models.core.Database.get_all_catalog_names")
+    @mock.patch("superset.models.core.Database.get_all_schema_names")
     def test_create_database_with_ssh_tunnel(
         self,
-        mock_test_connection_database_command_run,
-        mock_create_is_feature_enabled,
         mock_get_all_schema_names,
+        mock_get_all_catalog_names,
+        mock_create_is_feature_enabled,
+        mock_test_connection_database_command_run,
     ):
         """
         Database API: Test create with SSH Tunnel
@@ -344,14 +344,14 @@ class TestDatabaseApi(SupersetTestCase):
         "superset.commands.database.test_connection.TestConnectionDatabaseCommand.run",
     )
     @mock.patch("superset.commands.database.create.is_feature_enabled")
-    @mock.patch(
-        "superset.models.core.Database.get_all_schema_names",
-    )
+    @mock.patch("superset.models.core.Database.get_all_catalog_names")
+    @mock.patch("superset.models.core.Database.get_all_schema_names")
     def test_create_database_with_missing_port_raises_error(
         self,
-        mock_test_connection_database_command_run,
-        mock_create_is_feature_enabled,
         mock_get_all_schema_names,
+        mock_get_all_catalog_names,
+        mock_create_is_feature_enabled,
+        mock_test_connection_database_command_run,
     ):
         """
         Database API: Test that missing port raises SSHTunnelDatabaseError
@@ -397,15 +397,15 @@ class TestDatabaseApi(SupersetTestCase):
     )
     @mock.patch("superset.commands.database.create.is_feature_enabled")
     @mock.patch("superset.commands.database.update.is_feature_enabled")
-    @mock.patch(
-        "superset.models.core.Database.get_all_schema_names",
-    )
+    @mock.patch("superset.models.core.Database.get_all_catalog_names")
+    @mock.patch("superset.models.core.Database.get_all_schema_names")
     def test_update_database_with_ssh_tunnel(
         self,
-        mock_test_connection_database_command_run,
-        mock_create_is_feature_enabled,
-        mock_update_is_feature_enabled,
         mock_get_all_schema_names,
+        mock_get_all_catalog_names,
+        mock_update_is_feature_enabled,
+        mock_create_is_feature_enabled,
+        mock_test_connection_database_command_run,
     ):
         """
         Database API: Test update Database with SSH Tunnel
@@ -458,15 +458,15 @@ class TestDatabaseApi(SupersetTestCase):
     )
     @mock.patch("superset.commands.database.create.is_feature_enabled")
     @mock.patch("superset.commands.database.update.is_feature_enabled")
-    @mock.patch(
-        "superset.models.core.Database.get_all_schema_names",
-    )
+    @mock.patch("superset.models.core.Database.get_all_catalog_names")
+    @mock.patch("superset.models.core.Database.get_all_schema_names")
     def test_update_database_with_missing_port_raises_error(
         self,
-        mock_test_connection_database_command_run,
-        mock_create_is_feature_enabled,
-        mock_update_is_feature_enabled,
         mock_get_all_schema_names,
+        mock_get_all_catalog_names,
+        mock_update_is_feature_enabled,
+        mock_create_is_feature_enabled,
+        mock_test_connection_database_command_run,
     ):
         """
         Database API: Test that missing port raises SSHTunnelDatabaseError
@@ -523,16 +523,16 @@ class TestDatabaseApi(SupersetTestCase):
     @mock.patch("superset.commands.database.create.is_feature_enabled")
     @mock.patch("superset.commands.database.update.is_feature_enabled")
     @mock.patch("superset.commands.database.ssh_tunnel.delete.is_feature_enabled")
-    @mock.patch(
-        "superset.models.core.Database.get_all_schema_names",
-    )
+    @mock.patch("superset.models.core.Database.get_all_catalog_names")
+    @mock.patch("superset.models.core.Database.get_all_schema_names")
     def test_delete_ssh_tunnel(
         self,
-        mock_test_connection_database_command_run,
-        mock_create_is_feature_enabled,
-        mock_update_is_feature_enabled,
-        mock_delete_is_feature_enabled,
         mock_get_all_schema_names,
+        mock_get_all_catalog_names,
+        mock_delete_is_feature_enabled,
+        mock_update_is_feature_enabled,
+        mock_create_is_feature_enabled,
+        mock_test_connection_database_command_run,
     ):
         """
         Database API: Test deleting a SSH tunnel via Database update
@@ -606,15 +606,15 @@ class TestDatabaseApi(SupersetTestCase):
     )
     @mock.patch("superset.commands.database.create.is_feature_enabled")
     @mock.patch("superset.commands.database.update.is_feature_enabled")
-    @mock.patch(
-        "superset.models.core.Database.get_all_schema_names",
-    )
+    @mock.patch("superset.models.core.Database.get_all_catalog_names")
+    @mock.patch("superset.models.core.Database.get_all_schema_names")
     def test_update_ssh_tunnel_via_database_api(
         self,
-        mock_test_connection_database_command_run,
-        mock_create_is_feature_enabled,
-        mock_update_is_feature_enabled,
         mock_get_all_schema_names,
+        mock_get_all_catalog_names,
+        mock_update_is_feature_enabled,
+        mock_create_is_feature_enabled,
+        mock_test_connection_database_command_run,
     ):
         """
         Database API: Test update SSH Tunnel via Database API
@@ -684,15 +684,15 @@ class TestDatabaseApi(SupersetTestCase):
     @mock.patch(
         "superset.commands.database.test_connection.TestConnectionDatabaseCommand.run",
     )
-    @mock.patch(
-        "superset.models.core.Database.get_all_schema_names",
-    )
+    @mock.patch("superset.models.core.Database.get_all_catalog_names")
+    @mock.patch("superset.models.core.Database.get_all_schema_names")
     @mock.patch("superset.commands.database.create.is_feature_enabled")
     def test_cascade_delete_ssh_tunnel(
         self,
-        mock_test_connection_database_command_run,
-        mock_get_all_schema_names,
         mock_create_is_feature_enabled,
+        mock_get_all_schema_names,
+        mock_get_all_catalog_names,
+        mock_test_connection_database_command_run,
     ):
         """
         Database API: SSH Tunnel gets deleted if Database gets deleted
@@ -739,16 +739,16 @@ class TestDatabaseApi(SupersetTestCase):
         "superset.commands.database.test_connection.TestConnectionDatabaseCommand.run",
     )
     @mock.patch("superset.commands.database.create.is_feature_enabled")
-    @mock.patch(
-        "superset.models.core.Database.get_all_schema_names",
-    )
+    @mock.patch("superset.models.core.Database.get_all_catalog_names")
+    @mock.patch("superset.models.core.Database.get_all_schema_names")
     @mock.patch("superset.extensions.db.session.rollback")
     def test_do_not_create_database_if_ssh_tunnel_creation_fails(
         self,
-        mock_rollback,
-        mock_test_connection_database_command_run,
-        mock_create_is_feature_enabled,
         mock_get_all_schema_names,
+        mock_get_all_catalog_names,
+        mock_create_is_feature_enabled,
+        mock_test_connection_database_command_run,
+        mock_rollback,
     ):
         """
         Database API: Test rollback is called if SSH Tunnel creation fails
@@ -788,14 +788,14 @@ class TestDatabaseApi(SupersetTestCase):
         "superset.commands.database.test_connection.TestConnectionDatabaseCommand.run",
     )
     @mock.patch("superset.commands.database.create.is_feature_enabled")
-    @mock.patch(
-        "superset.models.core.Database.get_all_schema_names",
-    )
+    @mock.patch("superset.models.core.Database.get_all_catalog_names")
+    @mock.patch("superset.models.core.Database.get_all_schema_names")
     def test_get_database_returns_related_ssh_tunnel(
         self,
-        mock_test_connection_database_command_run,
-        mock_create_is_feature_enabled,
         mock_get_all_schema_names,
+        mock_get_all_catalog_names,
+        mock_create_is_feature_enabled,
+        mock_test_connection_database_command_run,
     ):
         """
         Database API: Test GET Database returns its related SSH Tunnel
@@ -842,13 +842,13 @@ class TestDatabaseApi(SupersetTestCase):
     @mock.patch(
         "superset.commands.database.test_connection.TestConnectionDatabaseCommand.run",
     )
-    @mock.patch(
-        "superset.models.core.Database.get_all_schema_names",
-    )
+    @mock.patch("superset.models.core.Database.get_all_catalog_names")
+    @mock.patch("superset.models.core.Database.get_all_schema_names")
     def test_if_ssh_tunneling_flag_is_not_active_it_raises_new_exception(
         self,
-        mock_test_connection_database_command_run,
         mock_get_all_schema_names,
+        mock_get_all_catalog_names,
+        mock_test_connection_database_command_run,
     ):
         """
         Database API: Test raises SSHTunneling feature flag not enabled
@@ -1448,6 +1448,7 @@ class TestDatabaseApi(SupersetTestCase):
         assert rv.status_code == 200
         assert set(data["permissions"]) == {
             "can_read",
+            "can_columnar_upload",
             "can_csv_upload",
             "can_excel_upload",
             "can_write",
@@ -1986,13 +1987,13 @@ class TestDatabaseApi(SupersetTestCase):
 
         rv = self.client.get(f"api/v1/database/{database.id}/schemas/")
         response = json.loads(rv.data.decode("utf-8"))
-        self.assertEqual(schemas, response["result"])
+        self.assertEqual(schemas, set(response["result"]))
 
         rv = self.client.get(
             f"api/v1/database/{database.id}/schemas/?q={prison.dumps({'force': True})}"
         )
         response = json.loads(rv.data.decode("utf-8"))
-        self.assertEqual(schemas, response["result"])
+        self.assertEqual(schemas, set(response["result"]))
 
     def test_database_schemas_not_found(self):
         """
@@ -3256,6 +3257,7 @@ class TestDatabaseApi(SupersetTestCase):
                     "sqlalchemy_uri_placeholder": "postgresql://user:password@host:port/dbname[?key=value&key=value...]",
                     "engine_information": {
                         "supports_file_upload": True,
+                        "supports_dynamic_catalog": True,
                         "disable_ssh_tunneling": False,
                     },
                 },
@@ -3279,6 +3281,7 @@ class TestDatabaseApi(SupersetTestCase):
                     "sqlalchemy_uri_placeholder": "bigquery://{project_id}",
                     "engine_information": {
                         "supports_file_upload": True,
+                        "supports_dynamic_catalog": True,
                         "disable_ssh_tunneling": True,
                     },
                 },
@@ -3334,6 +3337,7 @@ class TestDatabaseApi(SupersetTestCase):
                     "sqlalchemy_uri_placeholder": "redshift+psycopg2://user:password@host:port/dbname[?key=value&key=value...]",
                     "engine_information": {
                         "supports_file_upload": True,
+                        "supports_dynamic_catalog": False,
                         "disable_ssh_tunneling": False,
                     },
                 },
@@ -3357,6 +3361,7 @@ class TestDatabaseApi(SupersetTestCase):
                     "sqlalchemy_uri_placeholder": "gsheets://",
                     "engine_information": {
                         "supports_file_upload": True,
+                        "supports_dynamic_catalog": False,
                         "disable_ssh_tunneling": True,
                     },
                 },
@@ -3412,6 +3417,7 @@ class TestDatabaseApi(SupersetTestCase):
                     "sqlalchemy_uri_placeholder": "mysql://user:password@host:port/dbname[?key=value&key=value...]",
                     "engine_information": {
                         "supports_file_upload": True,
+                        "supports_dynamic_catalog": False,
                         "disable_ssh_tunneling": False,
                     },
                 },
@@ -3423,6 +3429,7 @@ class TestDatabaseApi(SupersetTestCase):
                     "sqlalchemy_uri_placeholder": "engine+driver://user:password@host:port/dbname[?key=value&key=value...]",
                     "engine_information": {
                         "supports_file_upload": True,
+                        "supports_dynamic_catalog": False,
                         "disable_ssh_tunneling": False,
                     },
                 },
@@ -3455,6 +3462,7 @@ class TestDatabaseApi(SupersetTestCase):
                     "sqlalchemy_uri_placeholder": "mysql://user:password@host:port/dbname[?key=value&key=value...]",
                     "engine_information": {
                         "supports_file_upload": True,
+                        "supports_dynamic_catalog": False,
                         "disable_ssh_tunneling": False,
                     },
                 },
@@ -3466,6 +3474,7 @@ class TestDatabaseApi(SupersetTestCase):
                     "sqlalchemy_uri_placeholder": "engine+driver://user:password@host:port/dbname[?key=value&key=value...]",
                     "engine_information": {
                         "supports_file_upload": True,
+                        "supports_dynamic_catalog": False,
                         "disable_ssh_tunneling": False,
                     },
                 },

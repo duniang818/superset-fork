@@ -43,6 +43,14 @@ assists people when migrating to a new version.
   set `SLACK_API_TOKEN` to fetch and serve Slack avatar links
 - [28134](https://github.com/apache/superset/pull/28134/) The default logging level was changed
   from DEBUG to INFO - which is the normal/sane default logging level for most software.
+- [28205](https://github.com/apache/superset/pull/28205) The permission `all_database_access` now
+  more clearly provides access to all databases, as specified in its name. Before it only allowed
+  listing all databases in CRUD-view and dropdown and didn't provide access to data as it
+  seemed the name would imply.
+
+### Potential Downtime
+
+- [27392](https://github.com/apache/superset/pull/27392): Adds an index to `query.sql_editor_id` to improve performance. This may cause downtime on large deployments.
 
 ## 4.0.0
 
@@ -76,6 +84,7 @@ assists people when migrating to a new version.
 ### Potential Downtime
 
 - [26416](https://github.com/apache/superset/pull/26416): Adds two database indexes to the `report_execution_log` table and one database index to the `report_recipient` to improve performance. Scheduled downtime may be required for large deployments.
+- [28482](https://github.com/apache/superset/pull/28482): Potentially augments the `query.executed_sql` and `query.select_sql` columns for MySQL from `MEDIUMTEXT` to `LONGTEXT`. Potential downtime may be required for large deployments which previously ran [27119](https://github.com/apache/superset/pull/27119).
 
 ## 3.1.0
 

@@ -1294,6 +1294,33 @@ class TestChartApi(ApiOwnersTestCaseMixin, InsertChartMixin, SupersetTestCase):
         data = json.loads(rv.data.decode("utf-8"))
         self.assertEqual(data["count"], 0)
 
+    @pytest.mark.usefixtures("load_energy_charts")
+    def test_user_gets_all_charts(self):
+        # test filtering on datasource_name
+        gamma_user = security_manager.find_user(username="gamma")
+
+        def count_charts():
+            uri = "api/v1/chart/"
+            rv = self.client.get(uri, "get_list")
+            self.assertEqual(rv.status_code, 200)
+            data = rv.get_json()
+            return data["count"]
+
+        with self.temporary_user(gamma_user, login=True):
+            self.assertEqual(count_charts(), 0)
+
+        perm = ("all_database_access", "all_database_access")
+        with self.temporary_user(gamma_user, extra_pvms=[perm], login=True):
+            assert count_charts() > 0
+
+        perm = ("all_datasource_access", "all_datasource_access")
+        with self.temporary_user(gamma_user, extra_pvms=[perm], login=True):
+            assert count_charts() > 0
+
+        # Back to normal
+        with self.temporary_user(gamma_user, login=True):
+            self.assertEqual(count_charts(), 0)
+
     @pytest.mark.usefixtures("create_charts")
     def test_get_charts_favorite_filter(self):
         """
@@ -1492,6 +1519,20 @@ class TestChartApi(ApiOwnersTestCaseMixin, InsertChartMixin, SupersetTestCase):
         assert "since" in data["result"][0]
         assert "until" in data["result"][0]
         assert "timeRange" in data["result"][0]
+
+        humanize_time_range = [
+            {"timeRange": "2021-01-01 : 2022-02-01", "shift": "1 year ago"},
+            {"timeRange": "2022-01-01 : 2023-02-01", "shift": "2 year ago"},
+        ]
+        uri = f"api/v1/time_range/?q={prison.dumps(humanize_time_range)}"
+        rv = self.client.get(uri)
+        data = json.loads(rv.data.decode("utf-8"))
+        assert rv.status_code == 200
+        assert len(data["result"]) == 2
+        assert "since" in data["result"][0]
+        assert "until" in data["result"][0]
+        assert "timeRange" in data["result"][0]
+        assert "shift" in data["result"][0]
 
     def test_query_form_data(self):
         """
