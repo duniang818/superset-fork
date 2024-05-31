@@ -1,6 +1,5 @@
 # Superset specific config
 ROW_LIMIT = 10000
-SUPERSET_WEBSERVER_PORT = 9587
 # Flask App Builder configuration
 # Your App secret key will be used for securely signing the session cookie
 # and encrypting sensitive information on the database
@@ -18,8 +17,7 @@ SECRET_KEY = 'LS0tLS1CRUdJTiBQVUJMSUMgS0VZLS0tLS0KTUlHZk'
 # you want to explore are managed directly in the web UI
 # The check_same_thread=false property ensures the sqlite client does not attempt
 # to enforce single-threaded access, which may be problematic in some edge cases
-# SQLALCHEMY_DATABASE_URI = 'sqlite:///C:/Users/wang.yumei7/.superset/examples.db?check_same_thread=false'
-# SQLALCHEMY_DATABASE_URI = 'mysql://root:wym2023@localhost/pam_test?charset=utf8'
+# SQLALCHEMY_DATABASE_URI = 'sqlite:///host/.superset/examples.db?check_same_thread=false'
 SQLALCHEMY_DATABASE_URI = 'mysql://root:wym2023@localhost/ss_dev?charset=utf8'
 # SESSION_COOKIE_SAMESITE = None
 
