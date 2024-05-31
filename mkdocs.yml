@@ -20,7 +20,6 @@
 
 # Project information
 site_name: superset-fork
-site_logo: assets/logo.png
 site_url: https://duniang818.github.io/superset-fork/
 site_author: duniang818
 site_description: >-
@@ -102,6 +101,9 @@ plugins:
       # separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
   - minify:
       minify_html: true
+  - git-revision-date-localized:
+      enable_creation_date: true
+      enable_last_updated_date: true
       
 
 # Hooks
