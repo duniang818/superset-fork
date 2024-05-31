@@ -1,0 +1,173 @@
+let link = document.getElementsByTagName('a')
+
+
+Array.from(link).forEach(element => {
+  element.onclick = function () {
+    let scm = element.getAttribute('data-tracker-scm')
+    let href = element.getAttribute('href')
+    if(href.includes('scm')) return
+    let query = href.split('?')
+    if(scm){
+      //如果有参数
+      if(query.length >1){
+        element.setAttribute('href',href+'&scm='+scm)
+      }else{
+        element.setAttribute('href',href+'?scm='+scm)
+      }
+    }
+}
+});
+
+
+let swiper = document.getElementsByClassName('course-pagination')
+let coursebox = document.getElementsByClassName('course-box')
+
+let itemLength = document.getElementsByClassName('course-itemBox').length
+if(itemLength<=2){
+  if(swiper[0]){
+  swiper[0].innerHTML='\n                <span class="swiper-pagination-bullet course-pagination-bullet swiper-pagination-bullet-active"></span>\n'
+  }
+}
+if(itemLength>2&&itemLength<=4){
+
+  swiper[0].innerHTML='\n                <span class="swiper-pagination-bullet course-pagination-bullet swiper-pagination-bullet-active"></span>\n                <span class="swiper-pagination-bullet course-pagination-bullet"></span>\n     '
+}
+if(itemLength>4&&itemLength<=6){
+  
+  swiper[0].innerHTML='\n                <span class="swiper-pagination-bullet course-pagination-bullet swiper-pagination-bullet-active"></span>\n                <span class="swiper-pagination-bullet course-pagination-bullet"></span>\n <span class="swiper-pagination-bullet course-pagination-bullet"></span>\n     '
+}
+let showScm = document.querySelectorAll('.course-itemBox a')
+let clickItem = document.querySelectorAll('.course-pagination .swiper-pagination-bullet')
+for (var i = 0; i < clickItem.length; i++) {
+  (function (i) {
+    clickItem[i].onclick = function () {
+console.log(i)
+    for (var index = 0; index < clickItem.length; index++) {
+      clickItem[index].className = 'swiper-pagination-bullet course-pagination-bullet'
+          }
+          clickItem[i].className = 'swiper-pagination-bullet course-pagination-bullet swiper-pagination-bullet-active'              
+    if(i == 0){
+      document.querySelectorAll(".course-box")[0].style.transform = `translate3d(0px, 0px, 0px)`
+      showScm.forEach((item,index)=>{
+        if(index<=2){
+          if(item.getAttribute('data-back-up')){
+            item.setAttribute('data-tracker-scm', item.getAttribute('data-back-up'))
+            item.removeAttribute('data-back-up')
+            window.$ACE_TRACKER.log('内容有效曝光采集', {
+              scm: item.getAttribute('data-tracker-scm'),
+              acm_module_id: "article-detail",
+              acm_type: 'exp_v2'
+            });
+            }
+        }else{
+            if(item.getAttribute('data-tracker-scm')) {
+             item.setAttribute('data-back-up', item.getAttribute('data-tracker-scm'))
+             item.removeAttribute('data-tracker-scm')
+            }
+        }
+      })
+    }
+     if(i == 1){
+     document.querySelectorAll(".course-box")[0].style.transform = `translate3d(0px, -190px, 0px)`
+      showScm.forEach((item,index)=>{
+        if(index>2&&index<=4){
+            if(item.getAttribute('data-back-up')){
+                item.setAttribute('data-tracker-scm', item.getAttribute('data-back-up'))
+                item.removeAttribute('data-back-up')
+                window.$ACE_TRACKER.log('内容有效曝光采集', {
+                  acm_module_id: "article-detail",
+                  scm: item.getAttribute('data-tracker-scm'),
+                  acm_type: 'exp_v2'
+                });
+            }
+        }else{
+            if(item.getAttribute('data-tracker-scm')) {
+             item.setAttribute('data-back-up', item.getAttribute('data-tracker-scm'))
+             item.removeAttribute('data-tracker-scm')
+            }
+        }
+      })
+    }
+     if(i == 2){
+      document.querySelectorAll(".course-box")[0].style.transform=`translate3d(0px, -380px, 0px)`
+      showScm.forEach((item,index)=>{
+        if(index>4&&index<=6){
+            if(item.getAttribute('data-back-up')){
+                item.setAttribute('data-tracker-scm', item.getAttribute('data-back-up'))
+                item.removeAttribute('data-back-up')
+                window.$ACE_TRACKER.log('内容有效曝光采集', {
+                  scm: item.getAttribute('data-tracker-scm'),
+                  acm_module_id: "article-detail",
+                  acm_type: 'exp_v2'
+                });
+            }
+        }else{
+            if(item.getAttribute('data-tracker-scm')) {
+             item.setAttribute('data-back-up', item.getAttribute('data-tracker-scm'))
+             item.removeAttribute('data-tracker-scm')
+            }
+        }
+      })
+    }
+    }
+  })(i);
+}
+
+var slider = document.querySelectorAll('.recommend-click-item ');
+var main = document.querySelector('.recommend-main');
+for (var i = 0; i < slider.length; i++) {
+(function (i) {
+slider[i].onclick = function () {
+for (var index = 0; index < slider.length; index++) {
+slider[index].className = 'recommend-click-item '
+}
+slider[i].className = 'recommend-click-item actives'
+if(i == 0){
+main.style.top = "0"
+}
+if(i == 1){
+main.style.top = "-145px"
+}
+if(i == 2){
+main.style.top = "-290px"
+}
+}
+})(i);
+}
+
+var bullet = document.querySelectorAll('.ebook-box .swiper-pagination-bullet');
+var wrapper = document.querySelectorAll(".swiper-ebook-container .swiper-wrapper")[1];
+if(wrapper){
+    wrapper.style.transform= `translate3d(-90px, 0px, 0px) `;
+}
+
+for (var i = 0; i < bullet.length; i++) {
+(function (i) {
+bullet[i].onclick = function () {
+for (var index = 0; index < bullet.length; index++) {
+bullet[index].className = 'swiper-pagination-bullet '
+}
+bullet[i].className = 'swiper-pagination-bullet swiper-pagination-bullet-active'
+if(i == 0){
+    setTimeout(()=>{
+        wrapper.style.transform= `translate3d(-90px, 0px, 0px) `;
+    }
+    ,100)
+
+    
+}
+if(i == 1){
+    setTimeout(()=>{
+        wrapper.style.transform= `translate3d(-270px, 0px, 0px) `;
+    }
+    ,100)
+}
+if(i == 2){
+    setTimeout(()=>{
+        wrapper.style.transform= `translate3d(-450px, 0px, 0px) `;
+    }
+    ,100)
+}
+}
+})(i);
+}

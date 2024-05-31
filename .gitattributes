@@ -1,1 +1,2 @@
 docker/**/*.sh text eol=lf
+docs/private/** user=duniang818 rw
