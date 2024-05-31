@@ -222,11 +222,11 @@ class BaseViz:  # pylint: disable=too-many-public-methods
         if rolling_type in ("mean", "std", "sum") and rolling_periods:
             kwargs = {"window": rolling_periods, "min_periods": min_periods}
             if rolling_type == "mean":
-                df = df.rolling(**kwargs).mean()
+                df = df.rolling(**kwargs).mean() # type: ignore
             elif rolling_type == "std":
-                df = df.rolling(**kwargs).std()
+                df = df.rolling(**kwargs).std() # type: ignore
             elif rolling_type == "sum":
-                df = df.rolling(**kwargs).sum()
+                df = df.rolling(**kwargs).sum() # type: ignore
         elif rolling_type == "cumsum":
             df = df.cumsum()
         if min_periods:

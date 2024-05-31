@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-/**
+/*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
  * distributed with this work for additional information
@@ -542,7 +542,7 @@ if (isDevMode) {
       },
       logging: 'error',
     },
-    static: path.join(__dirname, '../superset/static/assets'),
+    static: path.join(process.cwd(), '../static/assets'),
   };
 }
 

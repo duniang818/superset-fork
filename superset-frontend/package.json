@@ -47,7 +47,7 @@
     "core:cover": "cross-env NODE_ENV=test jest --coverage --coverageThreshold='{\"global\":{\"statements\":100,\"branches\":100,\"functions\":100,\"lines\":100}}' --collectCoverageFrom='[\"packages/**/src/**/*.{js,ts}\", \"!packages/superset-ui-demo/**/*\"]' packages",
     "cover": "cross-env NODE_ENV=test jest --coverage",
     "dev": "webpack --mode=development --color --watch",
-    "dev-server": "cross-env NODE_ENV=development BABEL_ENV=development node --max_old_space_size=4096 ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --mode=development",
+    "dev-server": "cross-env NODE_ENV=development BABEL_ENV=development node --max_old_space_size=4096 --trace-deprecation ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --mode=development --open --hot",
     "eslint": "eslint --ignore-path=.eslintignore --ext .js,.jsx,.ts,tsx",
     "format": "npm run _prettier -- --write",
     "lint": "npm run eslint -- . && npm run type",
@@ -80,6 +80,7 @@
     "last 3 edge versions"
   ],
   "dependencies": {
+    "@ant-design/charts": "^2.1.1",
     "@ant-design/icons": "^5.2.6",
     "@emotion/babel-preset-css-prop": "^11.11.0",
     "@emotion/cache": "^11.4.0",

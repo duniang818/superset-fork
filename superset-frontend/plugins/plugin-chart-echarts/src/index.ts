@@ -41,7 +41,7 @@ export {
 export { default as EchartsSunburstChartPlugin } from './Sunburst';
 export { default as EchartsBubbleChartPlugin } from './Bubble';
 export { default as EchartsWaterfallChartPlugin } from './Waterfall';
-
+export { default as EchartsWaterfallChart2Plugin } from './Waterfall2';
 export { default as BoxPlotTransformProps } from './BoxPlot/transformProps';
 export { default as FunnelTransformProps } from './Funnel/transformProps';
 export { default as GaugeTransformProps } from './Gauge/transformProps';
@@ -56,6 +56,7 @@ export { default as HeatmapTransformProps } from './Heatmap/transformProps';
 export { default as SunburstTransformProps } from './Sunburst/transformProps';
 export { default as BubbleTransformProps } from './Bubble/transformProps';
 export { default as WaterfallTransformProps } from './Waterfall/transformProps';
+export { default as Waterfall2TransformProps } from './Waterfall2/transformProps';
 
 export { DEFAULT_FORM_DATA as TimeseriesDefaultFormData } from './Timeseries/constants';
 

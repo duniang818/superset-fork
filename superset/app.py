@@ -22,15 +22,18 @@ from typing import Optional
 from flask import Flask
 
 from superset.initialization import SupersetAppInitializer
-
+# __name__ is the name of the current module, which is "superset.app"
 logger = logging.getLogger(__name__)
 
 
 def create_app(superset_config_module: Optional[str] = None) -> Flask:
+    """Create a Flask app instance.
+    箭头标识符表示函数的返回类型"""
     app = SupersetApp(__name__)
 
     try:
         # Allow user to override our config completely
+        # 从参数里获取配置模块名，如果没有，则从环境变量里获取，如果都没有，则使用默认的配置模块名 superset.config
         config_module = superset_config_module or os.environ.get(
             "SUPERSET_CONFIG", "superset.config"
         )

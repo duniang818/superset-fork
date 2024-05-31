@@ -73,6 +73,7 @@ import {
   EchartsSunburstChartPlugin,
   EchartsBubbleChartPlugin,
   EchartsWaterfallChartPlugin,
+  EchartsWaterfall2ChartPlugin,
   BigNumberPeriodOverPeriodChartPlugin,
   EchartsHeatmapChartPlugin,
 } from '@superset-ui/plugin-chart-echarts';
@@ -165,6 +166,9 @@ export default class MainPreset extends Preset {
         }),
         new EchartsWaterfallChartPlugin().configure({
           key: 'waterfall',
+        }),
+        new EchartsWaterfall2ChartPlugin().configure({
+          key: 'waterfall2',
         }),
         new EchartsHeatmapChartPlugin().configure({ key: 'heatmap_v2' }),
         new SelectFilterPlugin().configure({ key: FilterPlugins.Select }),
