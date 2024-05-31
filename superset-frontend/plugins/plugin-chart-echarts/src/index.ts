@@ -32,6 +32,7 @@ export { default as EchartsRadarChartPlugin } from './Radar';
 export { default as EchartsFunnelChartPlugin } from './Funnel';
 export { default as EchartsTreeChartPlugin } from './Tree';
 export { default as EchartsHeatmapChartPlugin } from './Heatmap';
+export { default as EchartsHeatmap2ChartPlugin } from './Heatmap2';
 export { default as EchartsTreemapChartPlugin } from './Treemap';
 export {
   BigNumberChartPlugin,
@@ -41,7 +42,11 @@ export {
 export { default as EchartsSunburstChartPlugin } from './Sunburst';
 export { default as EchartsBubbleChartPlugin } from './Bubble';
 export { default as EchartsWaterfallChartPlugin } from './Waterfall';
+<<<<<<< HEAD
 export { default as EchartsWaterfallChart2Plugin } from './Waterfall2';
+=======
+export { default as EchartsWaterfallcopyChartPlugin } from './Waterfallcopy';
+>>>>>>> 2bd827a5890d62e4a07b76587db6d9b00f2bb78d
 export { default as BoxPlotTransformProps } from './BoxPlot/transformProps';
 export { default as FunnelTransformProps } from './Funnel/transformProps';
 export { default as GaugeTransformProps } from './Gauge/transformProps';
@@ -53,6 +58,8 @@ export { default as TimeseriesTransformProps } from './Timeseries/transformProps
 export { default as TreeTransformProps } from './Tree/transformProps';
 export { default as TreemapTransformProps } from './Treemap/transformProps';
 export { default as HeatmapTransformProps } from './Heatmap/transformProps';
+export { default as Heatmap2TransformProps } from './Heatmap/transformProps';
+
 export { default as SunburstTransformProps } from './Sunburst/transformProps';
 export { default as BubbleTransformProps } from './Bubble/transformProps';
 export { default as WaterfallTransformProps } from './Waterfall/transformProps';

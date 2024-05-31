@@ -19,6 +19,7 @@
 # IN THE SOFTWARE.
 
 # Project information
+<<<<<<< HEAD
 site_name: superset-fork
 site_logo: assets/logo.png
 site_url: https://duniang818.github.io/superset-fork/
@@ -36,6 +37,21 @@ repo_url: https://github.com/duniang818/superset-fork
 
 # Copyright
 copyright: Copyright &copy; 2016 - 2024 duniang818
+=======
+site_name: Material for MkDocs
+site_url: https://duniang818.github.io/mkdocs-material-fork/
+site_author: Martin Donath
+site_description: >-
+  Write your documentation in Markdown and create a professional static site in
+  minutes – searchable, customizable, in 60+ languages, for all devices
+
+# Repository
+repo_name: duniang818/mkdocs-material-fork
+repo_url: https://github.com/duniang818/mkdocs-material-fork
+
+# Copyright
+copyright: Copyright &copy; 2016 - 2024 Martin Donath
+>>>>>>> 2bd827a5890d62e4a07b76587db6d9b00f2bb78d
 
 # Configuration
 theme:
@@ -185,6 +201,7 @@ not_in_nav: |
 # Page tree
 nav:
   - Home: index.md
+<<<<<<< HEAD
   - 工具:
     - 数据库连接: tools/database-connection.md
     - 数据导入: tools/data-import.md
@@ -229,6 +246,8 @@ nav:
     - 生活介绍: life/introduction.md
     - 生活习惯: life/habits.md
     - 生活方式: life/ways.md
+=======
+>>>>>>> 2bd827a5890d62e4a07b76587db6d9b00f2bb78d
   - Getting started:
     - Installation: getting-started.md
     - Creating your site: creating-your-site.md
