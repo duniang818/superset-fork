@@ -1,87 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://duniang818.git.io/superset-fork/</loc>
+         <loc>https://duniang818.github.io/superset-fork/</loc>
          <lastmod>2024-06-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://duniang818.git.io/superset-fork/2024-06-03/</loc>
+         <loc>https://duniang818.github.io/superset-fork/blog/</loc>
          <lastmod>2024-06-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://duniang818.git.io/superset-fork/analysis/analysis-index/</loc>
-         <lastmod>2024-06-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://duniang818.git.io/superset-fork/blog/</loc>
-         <lastmod>2024-06-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://duniang818.git.io/superset-fork/blog/blog-index/</loc>
-         <lastmod>2024-06-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://duniang818.git.io/superset-fork/blog/posts/</loc>
-         <lastmod>2024-06-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://duniang818.git.io/superset-fork/blog/posts/firstblog/</loc>
-         <lastmod>2024-06-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://duniang818.git.io/superset-fork/car/car-index/</loc>
-         <lastmod>2024-06-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://duniang818.git.io/superset-fork/gitfork/gitfork-index/</loc>
-         <lastmod>2024-06-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://duniang818.git.io/superset-fork/life/life-index/</loc>
-         <lastmod>2024-06-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://duniang818.git.io/superset-fork/private/private-index/</loc>
-         <lastmod>2024-06-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://duniang818.git.io/superset-fork/temp/new_note_temp/</loc>
-         <lastmod>2024-06-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://duniang818.git.io/superset-fork/todos/todos-index/</loc>
-         <lastmod>2024-06-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://duniang818.git.io/superset-fork/tools/SQLAlchemy/</loc>
-         <lastmod>2024-06-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://duniang818.git.io/superset-fork/tools/tools-index/</loc>
-         <lastmod>2024-06-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://duniang818.git.io/superset-fork/%E5%8F%AF%E5%8F%91%E5%B8%83/0%20Xset%204.0.0%E5%9C%A8Windows%E4%B8%8A%E6%BA%90%E7%A0%81%E9%83%A8%E7%BD%B2/</loc>
-         <lastmod>2024-06-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://duniang818.git.io/superset-fork/%E5%8F%AF%E5%8F%91%E5%B8%83/%E5%A6%82%E4%BD%95%E5%9C%A8win10%E7%B3%BB%E7%BB%9F%E4%B8%8A%E6%97%A0%E7%BD%91%E7%BB%9C%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85streamlit/</loc>
+         <loc>https://duniang818.github.io/superset-fork/src/pages/markdown-page/</loc>
          <lastmod>2024-06-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
