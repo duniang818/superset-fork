@@ -1,0 +1,199 @@
+{
+  "main": {
+    "id": "2c9dedfb58e4250e",
+    "type": "split",
+    "children": [
+      {
+        "id": "a9bebb6b52db79fe",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "23bf63cb67521f54",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "index.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "3f28ea66aca2a4c3",
+    "type": "split",
+    "children": [
+      {
+        "id": "af457d9bc285d517",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b38c132c3d5a5f1b",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "06790dc62f914260",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "e470eef75faf7fad",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "b60b99a52a2393dd",
+    "type": "split",
+    "children": [
+      {
+        "id": "97574d8f4e24b695",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3a029ed6a04d6213",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "index.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "b09bea8ab7e0b815",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "index.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "21ffc03f22b1cdb3",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "4ad31281ceb8e549",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "index.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "marp-slides:Show Slide Preview": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "notion-like-tables:Create loom": false,
+      "obsidian-memos:Thino": false,
+      "obsidian-kanban:创建新看板": false,
+      "pkmer:Open Pkmer Market": false,
+      "templater-obsidian:Templater": false
+    }
+  },
+  "active": "23bf63cb67521f54",
+  "lastOpenFiles": [
+    "temp/new_note_temp.md",
+    "blog/posts/posts",
+    "blog/posts/index.md",
+    "blog/posts/firstblog.md",
+    "tools/tools-index.md",
+    "life/life-index.md",
+    "life",
+    "car/car-index.md",
+    "car",
+    "docs/car",
+    "analysis/analysis-index.md",
+    "analysis",
+    "assets/analysis/analysis-index.md",
+    "assets/analysis",
+    "gitfork/gitfork-index.md",
+    "gitfork",
+    "blog/index.md",
+    "blog/blog-index.md",
+    "blog/posts",
+    "index.md",
+    "todos/todos-index.md",
+    "2024-06-03.md",
+    "tools/SQLAlchemy.md",
+    "static/img/applitools.png",
+    "export_path/03 产测业务熟悉.pdf",
+    "export_path/[Python]基础语法：函数装饰器，类装饰器，对象装饰器 - 知乎.pdf",
+    "export_path/笔记文件夹/mysql.png",
+    "export_path/笔记文件夹/csv.png",
+    "export_path/笔记文件夹/集成图.png",
+    "assets/favicon.png",
+    "assets/asstes.md",
+    "private/private-index.md",
+    "docs/gitfork/gitfork-index.md",
+    "jinjia模板.md",
+    "docs/gitfork/未命名.md",
+    "未命名.md",
+    "Untitled 3.md",
+    "未命名 3.md",
+    "未命名 2.md",
+    "未命名 1.md"
+  ]
+}

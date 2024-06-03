@@ -1,0 +1,33 @@
+draft: false
+author: duniang818
+creation date: <% tp.file.creation_date() %>
+modification date: <% tp.file.last_modified_date("dddd Do MMMM YYYY HH:mm:ss") %>
+tags:
+  - 工具
+  - 分析
+  - 汽车
+  - 生活
+  - 首页
+  - 编程
+  - 其他
+title: <% tp.file.title %>
+description: 
+authors:
+  - "[atom, duniang818]"
+date: 
+  created: "date: <% tp.file.creation_date() %>"
+  modified: "lastmod: <% tp.file.last_modified_date("dddd Do MMMM YYYY HH:mm:ss") %>"
+  updated: "lastmod: <% tp.file.last_modified_date("dddd Do MMMM YYYY HH:mm:ss") %>"
+categories:
+  - 工具
+  - 分析
+  - 汽车
+  - 生活
+  - 首页
+  - 编程
+  - 其他
+readtime: 5
+pin: true
+links:
+  - index.md
+  - blog/blog-index.md

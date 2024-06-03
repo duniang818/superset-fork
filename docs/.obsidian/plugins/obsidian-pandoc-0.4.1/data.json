@@ -1,0 +1,15 @@
+{
+  "showCLICommands": false,
+  "addExtensionsToInternalLinks": "html",
+  "injectAppCSS": "light",
+  "injectThemeCSS": false,
+  "customCSSFile": null,
+  "displayYAMLFrontmatter": false,
+  "linkStrippingBehaviour": "link",
+  "highDPIDiagrams": true,
+  "pandoc": "C:\\Users\\wang.yumei7\\AppData\\Local\\Pandoc\\pandoc.exe",
+  "pdflatex": null,
+  "outputFolder": "D:\\OB\\OB\\export_path",
+  "extraArguments": "",
+  "exportFrom": "md"
+}

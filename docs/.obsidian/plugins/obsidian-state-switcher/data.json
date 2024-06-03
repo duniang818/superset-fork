@@ -1,0 +1,38 @@
+{
+  "stateMaps": [
+    {
+      "key": "state",
+      "structure": "keyValue",
+      "values": [
+        "waiting",
+        "ongoing",
+        "completed"
+      ]
+    },
+    {
+      "key": "title",
+      "structure": "keyValue",
+      "values": [
+        "<% tp.file.title %>"
+      ]
+    },
+    {
+      "key": "tags",
+      "structure": "keyValue",
+      "values": [
+        "工具",
+        "编程",
+        "分析",
+        "生活",
+        "汽车"
+      ]
+    },
+    {
+      "key": "modification date",
+      "structure": "keyValue",
+      "values": [
+        "<% tp.file.last_modified_date() %>"
+      ]
+    }
+  ]
+}
