@@ -19,7 +19,7 @@ theme:
 nav:
   - 首页: index.md
   - 工具: 
-    - tools/如何利用Mkdocs+Material+GithubPages搭建个人博客.md
+    - tools/tools-index.md
     - mkdocs: 
         - 搭建: tools/如何利用Mkdocs+Material+GithubPages搭建个人博客.md
         - 配置: tools/配置mkdocs.md
