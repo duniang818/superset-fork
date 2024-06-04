@@ -25,4 +25,4 @@ links:
 
 1. 如何在普通句子中强制换行：输入两个空格，然后按 Enter 键
 2. 在当前目录下设置附件目录
-   ![](images/Pasted%20image%2020240604145301.png)
+   ![](images/Pasted%20image%2020240604145301.png)![1717490703462](images/obsidian/1717490703462.png)

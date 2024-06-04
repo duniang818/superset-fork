@@ -13,6 +13,7 @@ theme:
     - navigation.path
     - navigation.indexes
     - navigation.expand
+    - navigation.footer
 
 
 
@@ -23,6 +24,7 @@ nav:
     - mkdocs: 
         - 搭建: tools/如何利用Mkdocs+Material+GithubPages搭建个人博客.md
         - 配置: tools/配置mkdocs.md
+        - 自动部署: tools/Github Actions自动部署你的文章到Github Pages站点.md
     - obsidian: tools/obsidian.md
   - 分析: analysis/analysis-index.md
   - 汽车: car/car-index.md

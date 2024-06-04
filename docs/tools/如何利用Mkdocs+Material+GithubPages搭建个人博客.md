@@ -92,6 +92,8 @@ mkdocs serve
 
 ![1717482997215](images/如何利用Mkdocs+Material+GithubPages搭建个人博客/1717482997215.png)
 注意，只需要点击和修改红框的地方。gh-pages 不是我们建立的分支，是 mkdocs 在编译运行前会自动创建的分支，也同样会自动将博客编译后的 site 文件夹原封不动的复制到 gh-pages。
+
+![1717488375769](images/如何利用Mkdocs+Material+GithubPages搭建个人博客/1717488375769.png)
 如果等待十分钟后，还是没有在如你用户名的 https://xxxxxx.github.io/superset-fork/ 网址看见你的初始化博客，请反复设置和确认上图的步骤和内容，尤其是 deploy from a branch,  gh-pages /。
 
 # 6 如何在已有项目设置使用 Mkdocs

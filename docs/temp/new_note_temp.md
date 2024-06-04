@@ -19,11 +19,9 @@ links:
   - index.md
   - tools/如何利用Mkdocs+Material+GithubPages搭建个人博客
 ---
-<< [[<% tp.date.now("YYYY-MM-DD", -1) %>]] | [[<% tp.date.now("YYYY-MM-DD", 1) %>]] >>
-
 # 1 每日一句
 <% tp.web.daily_quote() %>
-# 2 文章主旨
+# 2 文章宗旨
 - [ ] 比较跨平台的静态网站生成工具
 - [ ] 安装，部署简单
 - [ ] 开源免费
