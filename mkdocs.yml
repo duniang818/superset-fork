@@ -12,12 +12,18 @@ theme:
     - navigation.sections
     - navigation.path
     - navigation.indexes
+    - navigation.expand
 
 
 
 nav:
   - 首页: index.md
-  - 工具: tools/tools-index.md
+  - 工具: 
+    - tools/如何利用Mkdocs+Material+GithubPages搭建个人博客.md
+    - mkdocs: 
+        - 搭建: tools/如何利用Mkdocs+Material+GithubPages搭建个人博客.md
+        - 配置: tools/配置mkdocs.md
+    - obsidian: tools/obsidian.md
   - 分析: analysis/analysis-index.md
   - 汽车: car/car-index.md
   - 生活: life/life-index.md

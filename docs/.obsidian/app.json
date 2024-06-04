@@ -2,5 +2,5 @@
   "promptDelete": false,
   "newLinkFormat": "absolute",
   "useMarkdownLinks": true,
-  "attachmentFolderPath": "assets"
+  "attachmentFolderPath": "./images"
 }
