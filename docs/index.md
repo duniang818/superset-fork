@@ -1,7 +1,7 @@
 ---
 author: duniang818
-creation date: 2024-06-03 14:48
-modification date: 星期一 3日 六月 2024 14:48:36
+created: 2024-06-03 14:48
+updated: 星期一 3日 六月 2024 14:48:36
 tags:
   - 工具
   - 分析
@@ -20,10 +20,12 @@ date:
 ---
 << [[2024-06-02]] | [[2024-06-04]] >>
 
-# 1 如何使用mkdocs and material
+# 1 如何用mkdocs+GitHubPages搭建自己的博客系统
 
 > [!quote] Imagination is more important than knowledge. For while knowledge defines all we currently know and understand, imagination points to all we might yet discover and create.
 > — Albert Einstein
+
+前言：
 
 ## 1.1 创建一个 blog
 

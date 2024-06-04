@@ -4,22 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "a9bebb6b52db79fe",
+        "id": "85575c4c105e8a51",
         "type": "tabs",
         "children": [
           {
-            "id": "23bf63cb67521f54",
+            "id": "2cd5dbc32e03161f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "temp/new_note_temp.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "375ba586393dc6d5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "blog/posts/00 如何利用Mkdocs+Github Pages搭建自己的博客系统.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "index.md",
+                "file": "blog/posts/00 如何利用Mkdocs+Github Pages搭建自己的博客系统.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "index.md",
+                "file": "blog/posts/00 如何利用Mkdocs+Github Pages搭建自己的博客系统.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "index.md"
+                "file": "blog/posts/00 如何利用Mkdocs+Github Pages搭建自己的博客系统.md"
               }
             }
           }
@@ -133,8 +146,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -153,47 +165,52 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "23bf63cb67521f54",
+  "active": "375ba586393dc6d5",
   "lastOpenFiles": [
+    "Mkdocs 配置.md",
     "temp/new_note_temp.md",
-    "blog/posts/posts",
-    "blog/posts/index.md",
-    "blog/posts/firstblog.md",
-    "tools/tools-index.md",
-    "life/life-index.md",
-    "life",
-    "car/car-index.md",
-    "car",
-    "docs/car",
-    "analysis/analysis-index.md",
-    "analysis",
-    "assets/analysis/analysis-index.md",
-    "assets/analysis",
-    "gitfork/gitfork-index.md",
-    "gitfork",
-    "blog/index.md",
-    "blog/blog-index.md",
-    "blog/posts",
-    "index.md",
     "todos/todos-index.md",
     "2024-06-03.md",
-    "tools/SQLAlchemy.md",
+    "blog/posts/00 如何利用Mkdocs+Github Pages搭建自己的博客系统.md",
+    "blog/posts/01 firstblog.md",
+    "blog/blog-index.md",
+    "blog/posts/index.md",
+    "blog/index.md",
+    "Pasted image 20240604104416.png",
+    "assets/Pasted image 20240604110604.png",
+    "assets/Pasted image 20240604110511.png",
+    "assets/Pasted image 20240604104557.png",
+    "2024-06-04.md",
+    "如何.md",
+    "Untitled 10.md",
+    "Untitled.md",
+    "weihelij .md",
+    "未命名 1.md",
+    "Untitled 9.md",
+    "Untitled 5.md",
+    "Untitled 8.md",
+    "Untitled 6.md",
+    "Untitled 7.md",
+    "未命名.md",
+    "Untitled 4.md",
+    "Untitled 3.md",
+    "Untitled 2.md",
+    "如何利用Mkdocs+GithubPages搭建自己的博客系统.md",
+    "Untitled 1.md",
+    "blog/posts/posts",
+    "life",
+    "car",
+    "docs/car",
+    "analysis",
+    "assets/analysis",
+    "gitfork",
+    "blog/posts",
     "static/img/applitools.png",
     "export_path/03 产测业务熟悉.pdf",
     "export_path/[Python]基础语法：函数装饰器，类装饰器，对象装饰器 - 知乎.pdf",
     "export_path/笔记文件夹/mysql.png",
     "export_path/笔记文件夹/csv.png",
     "export_path/笔记文件夹/集成图.png",
-    "assets/favicon.png",
-    "assets/asstes.md",
-    "private/private-index.md",
-    "docs/gitfork/gitfork-index.md",
-    "jinjia模板.md",
-    "docs/gitfork/未命名.md",
-    "未命名.md",
-    "Untitled 3.md",
-    "未命名 3.md",
-    "未命名 2.md",
-    "未命名 1.md"
+    "assets/favicon.png"
   ]
 }

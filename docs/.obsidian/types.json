@@ -8,6 +8,10 @@
     "author": "text",
     "modification date": "datetime",
     "authors": "multitext",
-    "readtime": "number"
+    "readtime": "number",
+    "title": "text",
+    "created": "date",
+    "updated": "date",
+    "summary": "multitext"
   }
 }

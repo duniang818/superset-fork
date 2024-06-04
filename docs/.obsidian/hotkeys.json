@@ -68,5 +68,22 @@
       ],
       "key": "T"
     }
-  ]
+  ],
+  "file-explorer:new-file": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "N"
+    }
+  ],
+  "quickadd:choice:77ffc60f-3c76-46fe-b320-d864f94e5e68": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "N"
+    }
+  ],
+  "templater-obsidian:create-new-note-from-template": []
 }

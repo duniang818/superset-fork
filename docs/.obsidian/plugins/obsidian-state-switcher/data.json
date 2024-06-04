@@ -28,7 +28,7 @@
       ]
     },
     {
-      "key": "modification date",
+      "key": "updated",
       "structure": "keyValue",
       "values": [
         "<% tp.file.last_modified_date() %>"
