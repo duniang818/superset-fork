@@ -1,12 +1,14 @@
-site_name: My site
+site_name: duniang818
 site_url: https://duniang818.git.io/superset-fork/
 repo_url: https://github.com/duniang818/superset-fork
-repo_name: superset-fork
+repo_name:  superset-fork
 edit_uri: edit/master/docs/
 
 theme:
   name: material
   features:
+    - toc.follow
+    - navigation.instant
     - navigation.top
     - navigation.tabs
     - navigation.sections
@@ -14,8 +16,34 @@ theme:
     - navigation.indexes
     - navigation.expand
     - navigation.footer
+  
+    # - toc.integrate
+    - content.code.annotate
+
+docs_dir: docs
+not_in_nav: |
+  /private/**/*.md
 
 
+plugins:
+  - search
+  - blog:
+     blog_dir: blog/posts
+
+markdown_extensions:
+  - meta
+  - toc:
+      permalink: true
+  - attr_list
+  - def_list
+  - tables
+  - pymdownx.highlight:
+      use_pygments: false
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - callouts
 
 nav:
   - 首页: index.md
@@ -25,8 +53,11 @@ nav:
         - 搭建: tools/如何利用Mkdocs+Material+GithubPages搭建个人博客.md
         - 配置: tools/配置mkdocs.md
         - 自动部署: tools/Github Actions自动部署你的文章到Github Pages站点.md
+        - 测试TOC: tools/test-toc.md
     - obsidian: tools/obsidian.md
-  - 分析: analysis/analysis-index.md
+  - 分析: 
+    -  superset: 
+        - 安装部署: analysis/0 Xset 4.0.0在Windows上源码部署.md
   - 汽车: car/car-index.md
   - 生活: life/life-index.md
   - 博客: blog/blog-index.md
@@ -34,7 +65,5 @@ nav:
   - Todo: todos/todos-index.md
 
 
-plugins:
-  - search
-  - blog:
-     blog_dir: blog/posts
+
+ 

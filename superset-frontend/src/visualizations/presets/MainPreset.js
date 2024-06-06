@@ -73,11 +73,6 @@ import {
   EchartsSunburstChartPlugin,
   EchartsBubbleChartPlugin,
   EchartsWaterfallChartPlugin,
-<<<<<<< HEAD
-  EchartsWaterfall2ChartPlugin,
-=======
-  EchartsWaterfallcopyChartPlugin,
->>>>>>> 2bd827a5890d62e4a07b76587db6d9b00f2bb78d
   BigNumberPeriodOverPeriodChartPlugin,
   EchartsHeatmapChartPlugin,
   EchartsHeatmap2ChartPlugin,
@@ -172,14 +167,6 @@ export default class MainPreset extends Preset {
         }),
         new EchartsWaterfallChartPlugin().configure({
           key: 'waterfall',
-        }),
-<<<<<<< HEAD
-        new EchartsWaterfall2ChartPlugin().configure({
-          key: 'waterfall2',
-=======
-        new EchartsWaterfallcopyChartPlugin().configure({
-          key: 'waterfallcopy',
->>>>>>> 2bd827a5890d62e4a07b76587db6d9b00f2bb78d
         }),
         new EchartsHeatmapChartPlugin().configure({ key: 'heatmap_v2' }),
         new EchartsHeatmap2ChartPlugin().configure({ key: 'heatmap2' }),

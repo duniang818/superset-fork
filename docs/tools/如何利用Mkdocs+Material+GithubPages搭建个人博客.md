@@ -1,45 +1,20 @@
----
-author: duniang818
-created: 2024-06-04 10:16
-updated: 2024-06-04 10:17
-tags:
-  - 工具
-  - 资源
-title: 如何利用Mkdocs+Material+GithubPages搭建个人博客
-draft: true
-readtime: 15
-pin: true
-links:
-  - index.md
-  - blog/blog-index.md
-description: 搭建博客的首篇文章。建议先通读，再点开细节了解感兴趣的地方。
----
-<< [[2024-06-03]] | [[2024-06-05]] >>
-
-# 1 每日一句
-
-> [!quote] Technology… is a queer thing. It brings you great gifts with one hand, and it stabs you in the back with the other.
-> — Carrie Snow
+# 1 如何利用Mkdocs+Material+GithubPages搭建个人博客
 
 在网上看见别人发表自己的文章，是不是非常羡慕，不仅撰写的内容非常的高质量，吸引人，而且他们的博客系统非常的美观且使用方便流畅？那么你是否也想时不时分享一些属于自己的内容给其他人呢？获得一丝丝的点赞和反馈呢？亦或在随着时间的流逝，在这个有记忆的互联网留下自己的足迹呢？
 我自己一直苦于这样的事情，但是一直没有找到办法，之前以为是要付费，或者需要前端开发经验，硬是把自己劝退无数次。
 但心底的呼声一旦发出，就时不时的会提醒你，这件事还没有做呢，这件事还没有做呢，到底还做不做，什么时候做？
 在经过一年的笔记软件使用和乱七八糟的编写经历后，发现博客系统原来是可以这么搭建起来的。
 好吧，开始动手干吧。
-
 # 2 选择 Mkdocs
 
 mkdocs 是静态网站生成工具， [**mkdocs官网**](https://www.mkdocs.org/)。
 material for mkdocs 是基于mkdocs网站的一套漂亮主题模板。
 为何选择这个：
-
 - python编写
 - 安装简单
 - 有个模板主题非常漂亮，[Material for MkDocs (squidfunk.github.io)](https://squidfunk.github.io/mkdocs-material/)
 - markdown文档支持
 - ok，有上面的四点已经满足我的需求了。也了解过 [Docusaurus](https://docusaurus.io/docs)，因为 superset doc 是用这个搭建的。但 docusaurus 它是利用前端来搭建的，安装就需要 npm 这样的工具，而且它是单页面静态网页应用，所以劝退了，最终选择了 **Mkdocs** 。
-- 也可以参考 [网站生成工具比较](/docs/blog/posts/网站生成工具比较.md)
-
 # 3 安装 Mkdocs
 
 安装 mkdocs ，material包：
@@ -56,7 +31,7 @@ mkdocs new yourfirst_blog_project
 
 进入目录查看项目结构，这是最简单的一个项目结构： `cd yourfirst_blog_project`
 
-![1717481980941](images/如何利用Mkdocs+Material+GithubPages搭建个人博客/1717481980941.png)
+![](tools/images/如何利用Mkdocs+Material+GithubPages搭建个人博客/1717481980941.png)
 
 mkdocs.yml: 全局配置文件，非常重要
 
@@ -86,14 +61,9 @@ mkdocs serve
 
 点击仓库的 setting，其它设置默认就好了，不需要进行修改。
 
-![1717482976228](images/如何利用Mkdocs+Material+GithubPages搭建个人博客/1717482976228.png)
-
 下面是我们要修改的地方。
 
-![1717482997215](images/如何利用Mkdocs+Material+GithubPages搭建个人博客/1717482997215.png)
 注意，只需要点击和修改红框的地方。gh-pages 不是我们建立的分支，是 mkdocs 在编译运行前会自动创建的分支，也同样会自动将博客编译后的 site 文件夹原封不动的复制到 gh-pages。
-
-![1717488375769](images/如何利用Mkdocs+Material+GithubPages搭建个人博客/1717488375769.png)
 如果等待十分钟后，还是没有在如你用户名的 https://xxxxxx.github.io/superset-fork/ 网址看见你的初始化博客，请反复设置和确认上图的步骤和内容，尤其是 deploy from a branch,  gh-pages /。
 
 # 6 如何在已有项目设置使用 Mkdocs
