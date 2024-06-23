@@ -16,6 +16,17 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+// below is custom add
+import {
+  ColumnChartPlugin,
+  SankeyMultilabelChartPlugin,
+  XYChartPlugin,
+  ScatterClusteringChartPlugin,
+ } from '@superset-custom-test/plugin-chart-custom-echarts';
+ import { SupersetHandsontablePlugin } from 'superset-handsontable-plugin';
+ import { StatisticChartPlugin } from '@sspingme/superset-ui-plugin-statistic';
+
+// below is origin
 import { isFeatureEnabled, FeatureFlag, Preset } from '@superset-ui/core';
 import CalendarChartPlugin from '@superset-ui/legacy-plugin-chart-calendar';
 import ChordChartPlugin from '@superset-ui/legacy-plugin-chart-chord';
@@ -98,6 +109,14 @@ export default class MainPreset extends Preset {
       name: 'Legacy charts',
       presets: [new DeckGLChartPreset()],
       plugins: [
+        //below is custom added
+        new ColumnChartPlugin().configure({ key: 'column-chart' }).register(),
+        new XYChartPlugin().configure({ key: 'xy-chart' }).register(),
+        new SankeyMultilabelChartPlugin().configure({ key: 'sankey-multilabel' }).register(),
+        new ScatterClusteringChartPlugin().configure({ key: 'scatter-clustering' }).register(),
+        new SupersetHandsontablePlugin().configure({ key: 'superset-handsontable-plugin' }),
+        new StatisticChartPlugin().configure({ key: 'superset-ui-plugin-statistic' }).register(),
+        //below is source
         new AreaChartPlugin().configure({ key: 'area' }),
         new BarChartPlugin().configure({ key: 'bar' }),
         new BigNumberChartPlugin().configure({ key: 'big_number' }),
